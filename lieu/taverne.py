@@ -1,13 +1,13 @@
 from lieu.lieu import Lieu
 
-class Village(Lieu):
+class Taverne(Lieu):
 
     def __init__(self):
-        super().__init__("Village",
+        super().__init__("Taverne",
                          None,
-                         ["1 - Aller à la taverne"],
+                         ["1 - Aller au village"],
                           ",^,\n")
         
     def agir(self, choix, game):
         if(choix == "1"):
-            game.changerLieu("Taverne")
+            game.changerLieu("Village")
